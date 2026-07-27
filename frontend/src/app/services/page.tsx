@@ -39,6 +39,51 @@ const services = [
     deliverables: ["Full source code", "GitHub Actions CI", "Production deployment", "Scope doc", "30-day post-launch support"],
     price: "$600+",
   },
+  {
+    id: "05",
+    title: "LLM Streaming & Chat Interfaces",
+    tag: "AI / LLM",
+    description: "Token-by-token streaming from OpenAI or Anthropic SDKs, wired through SSE or the Vercel AI SDK's useChat. Disconnect-aware: client drops the tab, the upstream call stops too.",
+    stack: ["OpenAI SDK", "Anthropic SDK", "Vercel AI SDK", "SSE", "Next.js", "asyncio"],
+    deliverables: ["Token-by-token streaming endpoint", "Mid-stream cancellation", "SSE reconnect / resume", "useChat frontend wiring", "Loom walkthrough"],
+    price: "$500+",
+  },
+  {
+    id: "06",
+    title: "Agentic Tool-Use Systems",
+    tag: "AI / LLM",
+    description: "Anthropic tool-use loops: model requests a function, the server executes it against a real backend, the result loops back until a final answer. Decoupled so swapping one tool touches zero loop logic.",
+    stack: ["Anthropic SDK", "FastAPI", "Python", "MCP"],
+    deliverables: ["Full tool_use round-trip", "Real subprocess/tool execution", "Message-history management", "Error handling per tool call", "Loom walkthrough"],
+    price: "$500+",
+  },
+  {
+    id: "07",
+    title: "LLM Cost & Context Engineering",
+    tag: "AI / LLM",
+    description: "Four-bucket cost accounting — input, output, cache-write, cache-read priced separately — checked before a request is even allowed to fire. Context-window auto-summarisation at a real, measured 80% threshold, not a guess.",
+    stack: ["Anthropic API", "tiktoken", "FastAPI", "Python", "SQLite"],
+    deliverables: ["Per-request cost ledger", "Pre-call token threshold guard", "Auto-summarisation at 80% capacity", "Admin cost dashboard", "Swagger docs"],
+    price: "$450+",
+  },
+  {
+    id: "08",
+    title: "Structured Output Validation",
+    tag: "AI / LLM",
+    description: "Closing the gap between 'asked the model for JSON' and 'got JSON back.' Strict schema mode plus runtime validation at every checkpoint — the model's output is trusted exactly as much as a user's form input.",
+    stack: ["Zod", "instructor", "Pydantic", "Anthropic SDK", "Express"],
+    deliverables: ["Strict JSON schema mode", "Zod / Pydantic runtime validation", "Three-checkpoint validation pipeline", "Near-zero failure rate", "Test suite"],
+    price: "$400+",
+  },
+  {
+    id: "09",
+    title: "Provider-Agnostic AI Architecture",
+    tag: "AI / LLM",
+    description: "Swap GPT-4 for Claude via one environment variable, not a rewrite. Paired with retry/backoff logic that's tested to actually fire correctly — not retry code that looks right and silently does nothing.",
+    stack: ["Vercel AI SDK", "OpenAI SDK", "Anthropic SDK", "tenacity", "Express"],
+    deliverables: ["Provider adapter layer", "One-env-var model routing", "Typed error responses (no silent fallthrough)", "Retry/backoff configuration", "Architecture doc"],
+    price: "$400+",
+  },
 ]
 
 const tagColors: Record<string, string> = {
@@ -46,6 +91,7 @@ const tagColors: Record<string, string> = {
   "real-time":   "text-[#6C63FF] border-[#6C63FF30] bg-[#6C63FF08]",
   "AI / vector": "text-[#A78BFA] border-[#A78BFA30] bg-[#A78BFA08]",
   "full-stack":  "text-[#F59E0B] border-[#F59E0B30] bg-[#F59E0B08]",
+  "AI / LLM":    "text-[#A78BFA] border-[#A78BFA30] bg-[#A78BFA08]",
 }
 
 function ServiceCard({ s, index }: { s: typeof services[0]; index: number }) {
