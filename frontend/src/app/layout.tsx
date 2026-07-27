@@ -32,14 +32,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Fuad Haque — Full-Stack Engineer",
+    default: "Fuad Haque — AI/LLM Backend Engineer",
     template: "%s | Fuad Haque",
   },
-  description: "Full-Stack Engineer building production FastAPI backends and Next.js frontends. Five projects deployed. Open to remote projects.",
-  keywords: ["FastAPI", "Next.js", "Full-Stack Engineer", "Webhook", "REST API", "Bangladesh developer"],
+  description: "AI/LLM Backend Engineer building production streaming, agentic tool-use loops, and LLM cost accounting with FastAPI, Anthropic SDK, and Next.js. Five live systems deployed, each with public docs and a recorded walkthrough.",
+  keywords: ["Anthropic SDK", "LLM Integration", "Agentic Tool Use", "FastAPI", "Next.js", "AI Backend Engineer", "Vercel AI SDK", "Bangladesh developer"],
   openGraph: {
-    title: "Fuad Haque — Full-Stack Engineer",
-    description: "Production FastAPI backends and the Next.js interfaces that make them shippable.",
+    title: "Fuad Haque — AI/LLM Backend Engineer",
+    description: "Production AI backends — token streaming, cost accounting, agentic tool-use loops — and the Next.js interfaces that make them shippable.",
     url: "https://fuadhaque.com",
     siteName: "Fuad Haque",
     locale: "en_US",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         url: "https://fuadhaque.com/og/portfolio.png",
         width: 1200,
         height: 630,
-        alt: "Fuad Haque — Full-Stack AI Engineer",
+        alt: "Fuad Haque — AI/LLM Backend Engineer",
       },
     ],
   },
