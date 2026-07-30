@@ -22,6 +22,11 @@ const services = [
   { label: "Webhook Integration System", price: "$400 - $600" },
   { label: "Semantic Search Platform", price: "$450+" },
   { label: "Full-Stack MVP", price: "$600+" },
+  { label: "LLM Streaming & Chat Interfaces", price: "$500+" },
+  { label: "Agentic Tool-Use Systems", price: "$500+" },
+  { label: "LLM Cost & Context Engineering", price: "$450+" },
+  { label: "Structured Output Validation", price: "$400+" },
+  { label: "Provider-Agnostic AI Architecture", price: "$400+" },
 ]
 
 const inputClass = "w-full bg-[#0D0D15] border border-[#1A1A2E] rounded-sm text-[#EEEEFF] font-mono text-sm p-3 placeholder:text-[#303055] focus:outline-none focus:border-[#6C63FF] focus:shadow-[0_0_12px_#6C63FF20] transition-all"
